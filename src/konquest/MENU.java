@@ -9,8 +9,8 @@ import Mapas.DisenioMapas;
 
 import java.util.Scanner;
 public class MENU {
-  Scanner leer=new Scanner (System.in); 
-  Scanner imprimir =new Scanner (System.in);  
+  Scanner leer = new Scanner (System.in); 
+  Scanner imprimir = new Scanner (System.in);  
     public void MENU (){
        
         int respuesta;

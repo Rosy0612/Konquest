@@ -5,6 +5,9 @@
  */
 package konquest;
 
+import java.text.DecimalFormat;
+import java.util.Random;
+
 /**
  *
  * @author rosy
@@ -17,6 +20,7 @@ public class Konquest {
     public static void main(String[] args) {
        MENU M1 = new MENU();
        M1.MENU();
+
     }
-    
+
 }
