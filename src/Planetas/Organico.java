@@ -2,13 +2,16 @@
 package Planetas;
 
 public class Organico extends Planeta {
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_RESET = "\u001B[0m";
+
     public Organico ( String nombre, double pMuerte, int cDinero, String conquistador){
         super (nombre, pMuerte, cDinero, conquistador);
     }
 
     @Override
     public String getConquistador() {
-        return conquistador;
+        return ANSI_GREEN+"Due: "+conquistador+ANSI_RESET;
     }
 
     @Override
@@ -18,7 +21,7 @@ public class Organico extends Planeta {
 
     @Override
     public String getNombre() {
-        return nombre;
+        return ANSI_GREEN+nombre+ANSI_RESET;
     }
 
     @Override
@@ -46,4 +49,8 @@ public class Organico extends Planeta {
         this.cDinero = cDinero;
     }
     
+    @Override
+    public String getTipo() {
+        return "Organico";
+    }
 }

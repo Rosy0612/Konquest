@@ -2,6 +2,9 @@
 package Planetas;
 
 public class Fuego extends Planeta {
+    
+public static final String ANSI_RED = "\u001B[31m";
+public static final String ANSI_RESET = "\u001B[0m";
    
     public Fuego( String nombre, double pMuerte, int cDinero, String conquistador ){
         super (nombre, pMuerte, cDinero, conquistador);
@@ -10,7 +13,7 @@ public class Fuego extends Planeta {
 
     @Override
     public String getConquistador() {
-        return conquistador;
+        return ANSI_RED+"Due: "+conquistador+ANSI_RESET;
     }
 
     @Override
@@ -20,7 +23,7 @@ public class Fuego extends Planeta {
 
     @Override
     public String getNombre() {
-        return nombre;
+        return ANSI_RED+"Nom: "+nombre+ANSI_RESET;
     }
 
     @Override
@@ -46,6 +49,12 @@ public class Fuego extends Planeta {
     @Override
     public void setcDinero(int cDinero) {
         this.cDinero = cDinero;
+    }
+    
+    
+    @Override
+    public String getTipo() {
+        return "Fuego";
     }
     
 }

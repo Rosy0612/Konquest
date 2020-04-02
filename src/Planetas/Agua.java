@@ -1,25 +1,28 @@
-
 package Planetas;
-public class Agua extends Planeta{
+
+public class Agua extends Planeta {
+
+    public static final String ANSI_BLUE = "\u001B[34m";
     
-    public Agua ( String nombre, double pMuerte, int cDinero, String conquistador){
-        super (nombre, pMuerte, cDinero, conquistador);
+    public static final String ANSI_RESET = "\u001B[0m";
+
+    public Agua(String nombre, double pMuerte, int cDinero, String conquistador) {
+        super(nombre, pMuerte, cDinero, conquistador);
     }
 
     @Override
     public String getConquistador() {
-        return conquistador;
+        return ANSI_BLUE +"Due: "+conquistador+ANSI_RESET;
     }
 
     @Override
     public void setConquistador(String conquistador) {
         this.conquistador = conquistador;
     }
-    
 
     @Override
     public String getNombre() {
-        return nombre;
+        return ANSI_BLUE +"Nom: "+ nombre+ANSI_RESET;
     }
 
     @Override
@@ -46,5 +49,10 @@ public class Agua extends Planeta{
     public void setcDinero(int cDinero) {
         this.cDinero = cDinero;
     }
-    
+
+    @Override
+    public String getTipo() {
+        return "Agua";
+    }
+
 }

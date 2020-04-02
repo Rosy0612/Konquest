@@ -1,18 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Planetas;
 
 public class Radioactivo extends Planeta{
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    
     public Radioactivo ( String nombre, double pMuerte, int cDinero, String conquistador){
         super (nombre, pMuerte, cDinero, conquistador);
     }
 
     @Override
     public String getConquistador() {
-        return conquistador;
+        return ANSI_YELLOW+"Due: "+conquistador+ANSI_RESET;
     }
 
     @Override
@@ -22,7 +20,7 @@ public class Radioactivo extends Planeta{
 
     @Override
     public String getNombre() {
-        return nombre;
+        return ANSI_YELLOW+nombre+ANSI_RESET;
     }
 
     @Override
@@ -50,4 +48,10 @@ public class Radioactivo extends Planeta{
         this.cDinero = cDinero;
     }
     
+    
+    @Override
+    public String getTipo() {
+        return "Radioactivo";
+    }
 }
+
